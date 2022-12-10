@@ -22,6 +22,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { FormsModule } from '@angular/forms';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import {MatRadioModule} from '@angular/material/radio';
     FormsModule,
     MatTooltipModule,
     MatRadioModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
