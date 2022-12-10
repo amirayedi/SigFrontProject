@@ -24,6 +24,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { GestionstreamerComponent } from './gestionstreamer/gestionstreamer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatSelectModule} from '@angular/material/select';
     TabledashboardComponent,
     RegistrationComponent,
     LoginComponent,
-    AboutusComponent
+    AboutusComponent,
+    GestionstreamerComponent
   ],
   imports: [
     BrowserModule,

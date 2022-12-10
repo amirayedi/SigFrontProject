@@ -1,0 +1,32 @@
+.page {
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+}
+.page__box {
+    min-height: 120px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+}
+.page__content {
+    min-height: calc(100vh - 178px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    padding-top: 50px;
+    background: rgb(223, 224, 227);
+    color: black;
+}
+
+.emp-profile{
+    padding: 3%;
+    margin-top: -20px;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+    
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
