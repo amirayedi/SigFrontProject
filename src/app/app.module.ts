@@ -11,7 +11,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TabledashboardComponent } from './tabledashboard/tabledashboard.component';
@@ -27,20 +26,26 @@ import {MatSelectModule} from '@angular/material/select';
 import { GestionstreamerComponent } from './gestionstreamer/gestionstreamer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { GestioncontenuComponent } from './gestioncontenu/gestioncontenu.component';
+import { RegistrationStreamerComponent } from './registration-streamer/registration-streamer.component';
+import { HistoriqueComponent } from './historique/historique.component';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     HomeComponent,
-    DashboardComponent,
+    
     NavbarComponent,
     TabledashboardComponent,
     RegistrationComponent,
     LoginComponent,
     AboutusComponent,
     GestionstreamerComponent,
-    GestioncontenuComponent
+    GestioncontenuComponent,
+    RegistrationStreamerComponent,
+    HistoriqueComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,

@@ -4,11 +4,11 @@ import { UserService } from '../service/user.service';
 import { User } from '../user';
 
 @Component({
-  selector: 'app-registration',
-  templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.css']
+  selector: 'app-registration-streamer',
+  templateUrl: './registration-streamer.component.html',
+  styleUrls: ['./registration-streamer.component.css']
 })
-export class RegistrationComponent implements OnInit {
+export class RegistrationStreamerComponent implements OnInit {
 
   constructor(private userService:UserService,private router:Router) { }
   message:String="";
@@ -17,8 +17,8 @@ export class RegistrationComponent implements OnInit {
   }
   onSubmit(){
     
-    this.user.role="u";
-    this.router.navigate(['/login']);
+    this.user.role="s";
+    this.router.navigate(['/gestionstreamer']);
     /*this.userService.createUser(this.user).subscribe(data => {
       console.log(data);
       this.router.navigate(['/login']);
@@ -28,4 +28,5 @@ export class RegistrationComponent implements OnInit {
     }*/
   
   }
+
 }
