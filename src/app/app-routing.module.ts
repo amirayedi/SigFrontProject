@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { GestioncontenuComponent } from './gestioncontenu/gestioncontenu.component';
 import { GestionstreamerComponent } from './gestionstreamer/gestionstreamer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'tabledashboard', component: TabledashboardComponent },
   { path: 'gestionstreamer', component: GestionstreamerComponent },
+  { path: 'gestioncontenu', component: GestioncontenuComponent },
   { path: '', component: AboutusComponent},
 ];
 

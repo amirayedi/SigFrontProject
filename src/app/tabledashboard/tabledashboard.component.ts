@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SharingdataService } from '../sharingdata.service';
+import { SharingdataService } from '../service/sharingdata.service';
 
 @Component({
   selector: 'app-tabledashboard',

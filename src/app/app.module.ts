@@ -25,6 +25,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { GestionstreamerComponent } from './gestionstreamer/gestionstreamer.component';
+import {HttpClientModule} from '@angular/common/http';
+import { GestioncontenuComponent } from './gestioncontenu/gestioncontenu.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { GestionstreamerComponent } from './gestionstreamer/gestionstreamer.comp
     RegistrationComponent,
     LoginComponent,
     AboutusComponent,
-    GestionstreamerComponent
+    GestionstreamerComponent,
+    GestioncontenuComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +57,7 @@ import { GestionstreamerComponent } from './gestionstreamer/gestionstreamer.comp
     FormsModule,
     MatTooltipModule,
     MatRadioModule,
+    HttpClientModule,
     MatFormFieldModule,
     MatSelectModule,
   ],

@@ -11,53 +11,36 @@
   <div class="container">
     <div class="title">Registration</div>
     <div class="content">
-      <form action="#">
+      <form (ngSubmit)="onSubmit()">
         <div class="user-details">
           <div class="input-box">
-            <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <span class="details">Nom</span>
+            <input type="text" id="nom" name="nom" [(ngModel)]="user.nom" placeholder="Donner votre nom" required>
           </div>
           <div class="input-box">
-            <span class="details">Username</span>
-            <input type="text" placeholder="Enter your username" required>
+            <span class="details">Prenom</span>
+            <input type="text" id="prenom" name="prenom" [(ngModel)]="user.prenom" placeholder="Donner votre prenom" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            <input type="email" id="email" name="email" [(ngModel)]="user.email" placeholder="Donner votre email" required>
           </div>
           <div class="input-box">
-            <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
+            <span class="details">Numéro de télèphone</span>
+            <input type="text" id="telephone" #telephone="ngModel" [class.is-invalid]="telephone.invalid && telephone.touched" name="telephone" minlength="8" maxlength="8" [(ngModel)]="user.telephone" placeholder="Donner votre numèro " required>
+            <small class="text-danger" [class.d-none]="telephone.valid || telephone.untouched">Un Champs De Taille 8</small>
           </div>
           <div class="input-box">
-            <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
+            <span class="details">Mot de passe</span>
+            <input type="password" id="password" name="password" #password="ngModel" [(ngModel)]="user.password" placeholder="Choisir un mot de passe" required>
           </div>
           <div class="input-box">
-            <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required>
+            <span class="details">Confirmer Mot de passe</span>
+            <input type="password" id="cpassword" name="cpassword" #cpassword="ngModel" [(ngModel)]="user.cpassword" placeholder="Répéter le mot de passe" required>
+            <small *ngIf="password.value != cpassword.value " class="text-danger">Les deux champs mot de passe doivent etre identiques</small>
           </div>
         </div>
-        <div class="gender-details">
-          <input type="radio" name="gender" id="dot-1">
-          <input type="radio" name="gender" id="dot-2">
-          <input type="radio" name="gender" id="dot-3">
-          <span class="gender-title">Gender</span>
-          <div class="category">
-            <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">Male</span>
-          </label>
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span class="gender">Female</span>
-          </label>
-          <label for="dot-3">
-            <span class="dot three"></span>
-            <span class="gender">Prefer not to say</span>
-            </label>
-          </div>
-        </div>
+       
         <div class="button">
           <input type="submit" value="Register" >
         </div>

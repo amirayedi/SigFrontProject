@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-control-geocoder/dist/Control.Geocoder.css";
 import "leaflet-control-geocoder/dist/Control.Geocoder.js";
 
-import { HomeserviceService } from '../homeservice.service';
+import { HomeserviceService } from '../service/homeservice.service';
 
 const popupOptions = { className: "customPopup" };
 
