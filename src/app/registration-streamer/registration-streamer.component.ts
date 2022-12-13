@@ -16,17 +16,12 @@ export class RegistrationStreamerComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(){
+    this.user.role="streamer";  
+          this.userService.createUser(this.user).subscribe(data => {
+            console.log(data);
+            this.router.navigate(['/gestionstreamer']);
+          })
+    }
     
-    this.user.role="s";
-    this.router.navigate(['/gestionstreamer']);
-    /*this.userService.createUser(this.user).subscribe(data => {
-      console.log(data);
-      this.router.navigate(['/login']);
-    }, error =>{
-      this.message="Email déja utilisé";
-        })
-    }*/
-  
-  }
 
 }

@@ -8,18 +8,18 @@ import { User } from '../user';
 })
 export class UserService {
   
-  private baseUrl ="http://localhost:8080/user/";
+  private baseUrl ="http://localhost:8080/";
 
   
   constructor(private httpClient: HttpClient){}
   
  
   public getListeUser(): Observable<User[]>{
-    return this.httpClient.get<User[]>(`${this.baseUrl}getAll`);
+    return this.httpClient.get<User[]>(`${this.baseUrl}getAllUsers`);
   }
 
   public createUser(user:User) : Observable<any>{
-    return this.httpClient.post(`${this.baseUrl}createUser`,user);
+    return this.httpClient.post(`${this.baseUrl}addUser`,user);
   }
 
   public loginUser(user:User) : Observable<any>{
@@ -30,6 +30,13 @@ export class UserService {
     return this.httpClient.put(`${this.baseUrl}update/${id}`,user);
   }
 
+  public getUserById(id:number):Observable<User>{
+    return this.httpClient.get<User>(`${this.baseUrl}get/${id}`);
+  }
+
+  public deleteUser(id:number) : Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl}delete/${id}`);
+  }
 
 
 }

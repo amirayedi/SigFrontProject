@@ -16,16 +16,12 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(){
-    
-    this.user.role="u";
-    this.router.navigate(['/login']);
-    /*this.userService.createUser(this.user).subscribe(data => {
-      console.log(data);
-      this.router.navigate(['/login']);
-    }, error =>{
-      this.message="Email déja utilisé";
-        })
-    }*/
+    this.user.role="user";  
+          this.userService.createUser(this.user).subscribe(data => {
+            console.log(data);
+            this.router.navigate(['/login']);
+          })
+    }
   
   }
-}
+

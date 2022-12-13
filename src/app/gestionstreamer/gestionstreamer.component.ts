@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../service/user.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-gestionstreamer',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionstreamerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService,private router:Router ,private route : ActivatedRoute) { }
 
+  public users!: User[];
   ngOnInit(): void {
+    this.getUsers();
+  }
+  public getUsers():void{
+    this.userService.getListeUser().subscribe(data=>{
+      this.users=data;
+    });
   }
 
+  updateuser(id:number){
+    this.router.navigate(['../updateSecretaire',id],{relativeTo:this.route});
+  }
+
+
+
+  deleteuser(id:number){
+    
+
+  }
 }
