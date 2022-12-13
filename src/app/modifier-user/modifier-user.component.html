@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form (ngSubmit)="onSubmit()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Nom</span>
+            <input type="text" id="nom" name="nom" [(ngModel)]="user.firstName" placeholder="Donner votre nom" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Prenom</span>
+            <input type="text" id="prenom" name="prenom" [(ngModel)]="user.lastName" placeholder="Donner votre prenom" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id="email" name="email" [(ngModel)]="user.email" placeholder="Donner votre email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Numéro de télèphone</span>
+            <input type="text" class="form-control" id="telephone" placeholder="Téléphone du user à ajouter" [(ngModel)]="user.telephone" name="telephone">
+        </div>
+          <div class="input-box">
+            <input hidden type="text" class="form-control" id="password" placeholder="Mot de passe du user à ajouter" [(ngModel)]="user.password" name="password">
+        </div>
+        </div>
+       
+        <div class="button">
+          <input type="submit" value="Valider" >
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

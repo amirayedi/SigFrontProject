@@ -14,67 +14,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let objet of objets ">
                 <td>
-                    Mot
+                    {{objet.value}}
                   </td>
                 <td>
-                  <button type="button" mdbRipple rippleColor="dark" class="btn btn-link btn-rounded btn-sm fw-bold">
-                    Modifier
-                  </button>
-                  <button
+                  <button (click)="deleteobjet(objet.id)"
                           type="button"
                           class="btn btn-link btn-rounded btn-sm fw-bold"
                           mdbRipple rippleColor="dark"
                           >
                     Retirer
                   </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Mot
-                </td>
-                
-                <td>
-                  <button
-                          type="button"
-                          class="btn btn-link btn-rounded btn-sm fw-bold"
-                          mdbRipple rippleColor="dark"
-                          >
-                    Modifier
-                  </button>
-                  <button
-                          type="button"
-                          class="btn btn-link btn-rounded btn-sm fw-bold"
-                          mdbRipple rippleColor="dark"
-                          >
-                    Retirer
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    Mot
-                  </td>
-                
-                <td>
-                  <button
-                          type="button"
-                          class="btn btn-link btn-rounded btn-sm fw-bold"
-                          mdbRipple rippleColor="dark"
-                          >
-                    Modifier
-                  </button>
-                  <button
-                          type="button"
-                          class="btn btn-link btn-rounded btn-sm fw-bold"
-                          mdbRipple rippleColor="dark"
-                          >
-                    Retirer
-                  </button>
-                </td>
-              </tr>
+                </td></tr>
             </tbody>
           </table>
           <div class="col-md-12 text-center">

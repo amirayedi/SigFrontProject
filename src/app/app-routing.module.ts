@@ -6,6 +6,7 @@ import { GestionstreamerComponent } from './gestionstreamer/gestionstreamer.comp
 import { HistoriqueComponent } from './historique/historique.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ModifierUserComponent } from './modifier-user/modifier-user.component';
 import { ProfilComponent } from './profil/profil.component';
 import { RegistrationStreamerComponent } from './registration-streamer/registration-streamer.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -14,6 +15,7 @@ import { TabledashboardComponent } from './tabledashboard/tabledashboard.compone
 const routes: Routes = [
   { path: 'tabledashboard', redirectTo: 'home'  , pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
+  { path: 'modifieruser/:id', component: ModifierUserComponent},
   { path: 'profil', component: ProfilComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },

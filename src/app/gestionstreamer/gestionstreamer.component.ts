@@ -23,13 +23,16 @@ export class GestionstreamerComponent implements OnInit {
   }
 
   updateuser(id:number){
-    this.router.navigate(['../updateSecretaire',id],{relativeTo:this.route});
+    this.router.navigate(['../modifieruser',id],{relativeTo:this.route});
   }
 
 
 
   deleteuser(id:number){
-    
+    this.userService.deleteUser(id).subscribe(data=>{
+      console.log("deleted");
+      this.router.navigate(['home']);
+    })
 
   }
 }

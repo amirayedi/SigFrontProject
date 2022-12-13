@@ -29,6 +29,7 @@ import { GestioncontenuComponent } from './gestioncontenu/gestioncontenu.compone
 import { RegistrationStreamerComponent } from './registration-streamer/registration-streamer.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { ProfilComponent } from './profil/profil.component';
+import { ModifierUserComponent } from './modifier-user/modifier-user.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ProfilComponent } from './profil/profil.component';
     GestioncontenuComponent,
     RegistrationStreamerComponent,
     HistoriqueComponent,
-    ProfilComponent
+    ProfilComponent,
+    ModifierUserComponent
   ],
   imports: [
     BrowserModule,
