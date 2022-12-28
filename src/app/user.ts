@@ -7,5 +7,6 @@ export class User {
     password!: string;
     cpassword!: string;
     role!: string;
+    image!:String;
     
 }

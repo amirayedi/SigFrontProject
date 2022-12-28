@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Mettre à jour votre profil</div>
+        <div class="content">
+            <form (ngSubmit)="onSubmit()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Nom</span>
+                        <input type="text" #user.firstName="ngModel" id="nom" name="nom" [(ngModel)]="user.firstName" placeholder="Donner votre nom" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Prenom</span>
+                        <input type="text" id="prenom" name="prenom" [(ngModel)]="user.lastName" placeholder="Donner votre prenom" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" id="email" name="email" [(ngModel)]="user.email" placeholder="Donner votre email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Numéro de télèphone</span>
+                        <input type="text" id="telephone" #telephone="ngModel" [class.is-invalid]="telephone.invalid && telephone.touched" name="telephone" minlength="8" maxlength="8" [(ngModel)]="user.telephone" placeholder="Donner votre numèro " required>
+                        <small class="text-danger" [class.d-none]="telephone.valid || telephone.untouched">Un Champs De Taille 8</small>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Mot de passe</span>
+                        <input type="password" id="password" name="password" #password="ngModel" [(ngModel)]="user.password" placeholder="Choisir un mot de passe" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirmer Mot de passe</span>
+                        <input type="password" id="cpassword" name="cpassword" #cpassword="ngModel" [(ngModel)]="user.cpassword" placeholder="Répéter le mot de passe" required>
+                        <small *ngIf="password.value != cpassword.value " class="text-danger">Les deux champs mot de passe doivent etre identiques</small>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Enregistrer les modifications">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

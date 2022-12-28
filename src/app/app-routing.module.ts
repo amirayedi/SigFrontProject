@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { GestioncontenuComponent } from './gestioncontenu/gestioncontenu.component';
 import { GestionstreamerComponent } from './gestionstreamer/gestionstreamer.component';
 import { HistoriqueComponent } from './historique/historique.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'gestionstreamer', component: GestionstreamerComponent },
   { path: 'historique', component: HistoriqueComponent },
   { path: 'gestioncontenu', component: GestioncontenuComponent },
+  { path: 'editProfile', component: EditProfileComponent },
   { path: '', component: AboutusComponent},
 ];
 

@@ -5,93 +5,93 @@
 <div class="container-fluid page">
     <div class="d-flex page__box p-3 mt-2">Profil</div>
     <div class="page__content">
-     
-      
+
+
         <!------ Include the above in your HEAD tag ---------->
-        
+
         <div class="container emp-profile">
-                    <form method="post">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="profile-img">
-                                    <div class="form-control">
-                                        Changer votre Photo
-                                        <input type="file" (change)="onFileSelected($event)" />
-                                        <img [src]="imgUrl" alt=" " height="100px" width="100px" *ngIf="imgUrl" />
-        
-                                    </div>
-                                    <button style="margin-top: 10px;margin-bottom: 20px;" class=" btn btn-success " (click)="onSubmit()" *ngIf="imgUrl">Valider image</button>
-        
-                                </div>
-        
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <div class="form-control">
+                                Changer votre Photo
+                                <input type="file" (change)="onFileSelected($event)" />
+                                <img [src]="imgUrl" alt=" " height="100px" width="100px" *ngIf="imgUrl" />
+
                             </div>
-                            <div class="col-md-6">
-                                <div class="profile-head" style="padding-left: 25px; ">
-                                            <h5>
-                                                Kshiti Ghelani
-                                            </h5>
-                                            <h6>
-                                                Web Developer and Designer
-                                            </h6>
-                                            <p class="proile-rating">RANKINGS : <span>8/10</span></p>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                            </div>
+                            <button style="margin-top: 10px;margin-bottom: 20px;" class=" btn btn-success " (click)="onSubmit()" *ngIf="imgUrl">Valider image</button>
+
                         </div>
-                        <div class="row">
-                            
-                            <div class="col-md-8">
-                                <div class="tab-content profile-tab" id="myTabContent">
-                                    <div class="tab-pane fade show active" style="margin-left: 50px;" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                                <div class="row" >
-                                                    <div class="col-md-6">
-                                                        <label>User Id</label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <p>Kshiti123</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <label>Name</label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <p>Kshiti Ghelani</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <label>Email</label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <p>kshitighelani@gmail.com</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <label>Phone</label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <p>123 456 7890</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <label>Profession</label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <p>Web Developer and Designer</p>
-                                                    </div>
-                                                </div>
-                                    </div>
-                                </div>
-                            </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head" style="padding-left: 25px; ">
+                            <h5>
+                                {{user.firstName}}
+                            </h5>
+                            <h6>
+                                {{user.role}}
+                            </h6>
+                            <!-- <p class="proile-rating">RANKINGS : <span>8/10</span></p> -->
                         </div>
-                    </form>           
+                    </div>
+                    <div class="col-md-2">
+                        <img src="assets/{{user.image}}" style="width:370px;height:200px;" class="img-fluid rounded-top" alt="">
+                        <input type="button" value="edit profil" class="profile-edit-btn" style="width: 130px;margin-left: 10px;;" name="btnAddMore" (click)="actionEdit()" />
+                    </div>
                 </div>
-      </div>
-    
-  </div>
-  
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" style="margin-left: 50px;" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>User Id</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{user.firstName}} @{{user.id}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Name</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{user.lastName}} {{user.firstName}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{user.email}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Phone</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{user.telephone}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Role dans notre application</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{user.role}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

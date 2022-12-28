@@ -30,6 +30,7 @@ import { RegistrationStreamerComponent } from './registration-streamer/registrat
 import { HistoriqueComponent } from './historique/historique.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ModifierUserComponent } from './modifier-user/modifier-user.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ModifierUserComponent } from './modifier-user/modifier-user.component';
     RegistrationStreamerComponent,
     HistoriqueComponent,
     ProfilComponent,
-    ModifierUserComponent
+    ModifierUserComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
