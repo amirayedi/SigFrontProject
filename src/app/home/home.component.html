@@ -14,14 +14,10 @@
   <div class="d-flex page__box p-3 mt-2">Home</div>
   
   <div class="input-group" style="margin-top: 5px;">
-    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+    <input type="search" class="form-control rounded"  type="text" name="searchValue" [(ngModel)]="searchValue" (ngModelChange)="search()" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
     <button type="button" class="btn btn-outline-primary">search</button>
   </div>
-
   <div class="page__content shadow p-3 position-relative" style="margin-top: 10px;">
-  
-    
-
       <div class="map-container" >
         <div class="map-frame">
           <div id="map"></div>
@@ -33,4 +29,5 @@
 </body>
 
 </html>
+
  

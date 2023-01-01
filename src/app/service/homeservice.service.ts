@@ -1,30 +1,29 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Objet } from '../objet';
+import { User } from '../user';
+import { ObjetService } from './objet.service';
+import { UserService } from './user.service';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomeserviceService {
 
-  constructor() { }
+  constructor(private userService:UserService) { }
+  user!:User
   
   makeCapitalPopup(data: any): string {
+   
     return `` +
-      `<div>Capital: ${ data.latlng.lng }</div>` +
-      `<div>State: ${ data.latlng.lat }</div>` +
-      `<p>You can reach Michael at:</p>
-
-      <ul>
-        <li><a href="https://example.com">Website</a></li>
-        <li><a href="mailto:m.bluth@example.com">Email</a></li>
-        <li><a href="tel:+123456789">Phone</a></li>
-      </ul> 
-      <button class="favorite styled"
-      type="button">
-      Supprimer
-      </button>
-      <button class="favorite styled"
-      type="button">
-      ajouter
-      </button> `
+    `
+      
+      <div>the Object of the streaming video is about :</div> 
+      <h2>${data.objet.value}</h2>    
+      <p>you can follow our streamer with the link below :</p> 
+      <a href="${ data.lien }">link</a>
+      
+     `
   }
+  
 }

@@ -11,13 +11,22 @@ export class SharingdataService {
 
   private functioHideLoginNav = new BehaviorSubject('false');
   currentfunctioHideLoginNav = this.functioHideLoginNav.asObservable();
+
+  private functioAddtoMap = new BehaviorSubject(0);
+  currentfunctioAddtoMap = this.functioAddtoMap.asObservable();
   
   constructor() { }
+
+  updateAddMap(message: number) {
+    this.functioAddtoMap.next(message)
+    }
+
 
   updateApprovalMessage(message: string) {
     this.approvalStageMessage.next(message)
     }
-    updateLoginNav(message: string) {
+
+  updateLoginNav(message: string) {
       this.functioHideLoginNav.next(message)
       }  
 

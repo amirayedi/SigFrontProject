@@ -12,7 +12,7 @@
         <div class="container emp-profile">
             <form method="post">
                 <div class="row">
-                    <div class="col-md-4">
+                   <!--<div class="col-md-4">
                         <div class="profile-img">
                             <div class="form-control">
                                 Changer votre Photo
@@ -24,6 +24,15 @@
 
                         </div>
 
+                    </div>--> 
+                    <div class="profile-img" style="width: 354px;height: 200px;">
+                        <img src="assets/{{user.image}}" alt=""/>
+                        <div class="file btn btn-lg btn-primary">
+                            Change Photo
+                            <input type="file" (change)="onFileSelected($event)" />
+                            <img [src]="imgUrl" alt=" " height="100px" width="100px" *ngIf="imgUrl" />
+                        </div>
+                        <button style="margin-top: 10px;margin-bottom: 20px;" class=" btn btn-success " (click)="onSubmit()" *ngIf="imgUrl">Valider image</button>
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head" style="padding-left: 25px; ">
@@ -37,7 +46,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <img src="assets/{{user.image}}" style="width:370px;height:200px;" class="img-fluid rounded-top" alt="">
+                        <!--<img src="assets/{{user.image}}" style="width:370px;height:200px;" class="img-fluid rounded-top" alt="">-->
                         <input type="button" value="edit profil" class="profile-edit-btn" style="width: 130px;margin-left: 10px;;" name="btnAddMore" (click)="actionEdit()" />
                     </div>
                 </div>

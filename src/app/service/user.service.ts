@@ -18,6 +18,10 @@ export class UserService {
     return this.httpClient.get<User[]>(`${this.baseUrl}getAllUsers`);
   }
 
+  public getListeUserByRole(): Observable<User[]>{
+    return this.httpClient.get<User[]>(`${this.baseUrl}getStreamersUsers`);
+  }
+
   public createUser(user:User) : Observable<any>{
     return this.httpClient.post(`${this.baseUrl}addUser`,user);
   }

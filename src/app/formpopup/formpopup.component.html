@@ -1,0 +1,29 @@
+
+<form (ngSubmit)="onSubmit()">
+    <div>Capital : {{data.lng}}</div>
+    <div>State : {{data.lat}}</div> 
+    <p>You can reach {{user.firstName}} {{user.lastName}} at:</p>
+    <div class="font-social">
+      <!-- Facebook -->
+      <img src="assets/f.png" (click)="changevisibility()" style="width: 20px;margin-left: 25px;"alt=""/>
+      <!-- Instagram -->
+      <img src="assets/Instagram.png"  (click)="changevisibility()" style="width: 20px;margin-left: 25px;"alt=""/>
+      <!-- Youtube -->
+      <img src="assets/Y.png"  (click)="changevisibility()" style="width: 23px;margin-left: 25px;"alt=""/><br/>
+
+    </div>
+
+
+    <input [hidden]="visible" id="prenom" name="prenom" [(ngModel)]="video.lien" type="text"  placeholder="Donner votre lien" required>
+    <div class="form-check" *ngFor="let objet of objets ">
+        <label>
+            <input type="checkbox" [value]="objet.id" (change)="onCheckboxChange($event)" />
+            {{objet.value}}
+          </label>
+    </div>
+    
+      <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <button mat-button type="submit" cdkFocusInitial>Register</button>
+      </div>
+</form>

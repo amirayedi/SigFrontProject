@@ -15,9 +15,10 @@ export class GestionstreamerComponent implements OnInit {
   public users!: User[];
   ngOnInit(): void {
     this.getUsers();
+    
   }
   public getUsers():void{
-    this.userService.getListeUser().subscribe(data=>{
+    this.userService.getListeUserByRole().subscribe(data=>{
       this.users=data;
     });
   }

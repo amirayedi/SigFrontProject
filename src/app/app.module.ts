@@ -7,6 +7,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -31,6 +32,7 @@ import { HistoriqueComponent } from './historique/historique.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ModifierUserComponent } from './modifier-user/modifier-user.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { FormpopupComponent } from './formpopup/formpopup.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     HistoriqueComponent,
     ProfilComponent,
     ModifierUserComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    FormpopupComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +72,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     HttpClientModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,13 +12,13 @@
       <mat-icon>account_box</mat-icon> Profil
     </a>
     
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/gestionstreamer">
+    <a *ngIf="show" mat-list-item routerLinkActive="list-item-active" routerLink="/gestionstreamer">
       <mat-icon>contacts</mat-icon> Gestion Streamer
     </a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/gestioncontenu">
+    <a *ngIf="show" mat-list-item routerLinkActive="list-item-active" routerLink="/gestioncontenu">
       <mat-icon>assignment</mat-icon> Gestion Contenu
     </a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/historique">
+    <a *ngIf="show" mat-list-item routerLinkActive="list-item-active" routerLink="/historique">
       <mat-icon>history</mat-icon> Historique
     </a>
     

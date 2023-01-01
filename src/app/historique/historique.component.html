@@ -3,9 +3,58 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <div class="container-fluid page">
-    <div class="d-flex page__box p-3 mt-2">Historique</div>
+    <div class="d-flex page__box p-3 mt-2">Gestion Streamer</div>
     <div class="page__content">
-        
+        <div class="container emp-profile">
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+              <tr>
+                <th>Name</th>
+                <th>Telephone</th>
+                <th>Object</th>
+                <th>Place</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users ;let i = index"  >
+                
+                <td>
+                  <div class="d-flex align-items-center" >
+                    <img
+                        src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        class="rounded-circle"
+                        />
+                    <div class="ms-3" >
+                      <p class="fw-bold mb-1">{{user.firstName}} </p>
+                      <p class="text-muted mb-0">{{user.email}}</p>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">{{user.telephone}}</p>
+                </td>
+                
+              
+                <td>
+                  <div class="d-flex align-items-center" >
+                    
+                    <div class="ms-3" >
+                     
+                      <p class="text-muted mb-0">{{videos[i].objet.value}}</p>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">{{videos[i].lat}}</p>
+                  <p class="text-muted mb-0">{{videos[i].lng}}</p>
+                </td>
+               
+              </tr>
+            </tbody>
+          </table>
+          </div>
 </div>
     
 </div>

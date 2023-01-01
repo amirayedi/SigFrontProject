@@ -12,6 +12,7 @@ export class RegistrationStreamerComponent implements OnInit {
 
   constructor(private userService:UserService,private router:Router) { }
   message:String="";
+  
   user:User = new User();
   ngOnInit(): void {
   }
