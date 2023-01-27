@@ -17,6 +17,7 @@ export class ProfilComponent implements OnInit {
   selectedFile! : File;
   imgUrl: any
   message!: string;
+  visibility:boolean=false;
   constructor( private router: Router,private userService:UserService, private httpClient: HttpClient,public login: LoginService) { }
 
   idLog!:Number
@@ -34,7 +35,8 @@ export class ProfilComponent implements OnInit {
   }
 
   onFileSelected(event:any) {
-    if (event.target.files.length > 0) {
+    this.visibility=!this.visibility;
+        if (event.target.files.length > 0) {
       this.selectedFile=<File>event.target.files[0];
       console.log(event);
       var reader = new FileReader();

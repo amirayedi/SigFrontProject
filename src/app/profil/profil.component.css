@@ -28,9 +28,8 @@ body{
     border-radius: 0.5rem;
     background: #fff;
     
-    padding-top: 100px;
-    padding-bottom: 100px;
-
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 .profile-img{
     text-align: center;
@@ -48,6 +47,12 @@ body{
     border-radius: 0;
     font-size: 15px;
     background: #212529b8;
+    
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+
 }
 .profile-img .file input {
     position: absolute;

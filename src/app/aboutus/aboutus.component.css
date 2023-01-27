@@ -7,7 +7,7 @@
 .hero{
 	height: 100vh;
 	width: 100%;
-	background-image: url("/assets/st.jpg");
+	background-image: url("/assets/sig1.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -72,7 +72,7 @@ h3{
 	font-size: 25px;
 	margin-bottom: 50px;
 }
-h4{
+h2{
 	color: #fcfc;
 	letter-spacing: 2px;
 	font-size: 20px;
